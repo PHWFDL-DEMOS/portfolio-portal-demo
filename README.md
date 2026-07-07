@@ -2,9 +2,9 @@
 
 Demonstration prototype for buy-to-let portfolio management. All data is fictional.
 
-**Live demo:** https://phwfdl-demos.github.io/landlord-portal-demo/
+**Live demo:** https://phwfdl-demos.github.io/portfolio-portal-demo
 
-**Repository:** https://github.com/PHWFDL-DEMOS/landlord-portal-demo
+**Repository:** https://github.com/PHWFDL-DEMOS/portfolio-portal-demo
 
 **Agent / developer reference:** see [`PROJECT_REFERENCE.md`](PROJECT_REFERENCE.md).
 
