@@ -4418,8 +4418,7 @@ function renderUploadCsv() {
           <div class="upload-zone" id="upload-zone">
             <div class="upload-zone__icon">📄</div>
             <p>Drag and drop your CSV file here, or click to browse</p>
-            <label class="btn btn-primary" for="csv-input">Choose file</label>
-            <input type="file" id="csv-input" accept=".csv,text/csv" hidden>
+            <button type="button" class="btn btn-primary" data-action="demo-choose-file">Choose file</button>
           </div>
         </div>
 
@@ -4722,18 +4721,17 @@ function processCsvText(text) {
 
 function setupCsvUpload() {
   const zone = document.getElementById('upload-zone');
-  const input = document.getElementById('csv-input');
+  if (!zone) return;
 
-  const handleFile = (file) => {
-    if (!file) return;
-    input.value = '';
+  const startDemoImport = (e) => {
+    e.preventDefault();
     triggerDemoBulkImport();
   };
 
-  input.addEventListener('change', () => handleFile(input.files[0]));
+  zone.querySelector('[data-action="demo-choose-file"]')?.addEventListener('click', startDemoImport);
   zone.addEventListener('click', (e) => {
-    if (e.target.closest('label[for="csv-input"]')) return;
-    input.click();
+    if (e.target.closest('[data-action="demo-choose-file"]')) return;
+    startDemoImport(e);
   });
   zone.addEventListener('dragover', (e) => {
     e.preventDefault();
@@ -4743,7 +4741,7 @@ function setupCsvUpload() {
   zone.addEventListener('drop', (e) => {
     e.preventDefault();
     zone.classList.remove('dragover');
-    handleFile(e.dataTransfer.files[0] || { name: 'portfolio.csv' });
+    triggerDemoBulkImport();
   });
 }
 
