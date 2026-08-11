@@ -100,17 +100,70 @@ let pendingBulkImportSuccess = null;
 let marketplaceEpcFilter = 'all';
 let marketplaceInvestorClubFilter = 'all';
 
-const BRAND_LOGO_PATH = 'assets/image.png';
-const BRAND_ICON_PATH = 'assets/icon.png';
+const DEMO_SKINS = {
+  1: {
+    id: '1',
+    label: 'Brand 1',
+    logo: 'assets/image.png',
+    colors: { primary: '#2D95EC', dark: '#1A7BC9' },
+  },
+  2: {
+    id: '2',
+    label: 'Brand 2',
+    logo: 'assets/S1.png',
+    colors: { primary: '#CF2F90', dark: '#292C35' },
+  },
+  3: {
+    id: '3',
+    label: 'Brand 3',
+    logo: 'assets/A1.png',
+    colors: { primary: '#F7CF46', dark: '#12191F' },
+  },
+};
+
 const DATALOFT_LOGO_PATH = 'assets/dataloft-logo.png';
 const WHENFRESH_LOGO_PATH = 'assets/WF.png';
 
+function getDemoSkinId() {
+  const id = String(state?.demoSkin || '1');
+  return DEMO_SKINS[id] ? id : '1';
+}
+
+function getDemoSkin() {
+  return DEMO_SKINS[getDemoSkinId()];
+}
+
+function getBrandLogoPath() {
+  return getDemoSkin().logo;
+}
+
+function getBrandAlt() {
+  return getDemoSkin().label;
+}
+
+function getBrandColors() {
+  return getDemoSkin().colors;
+}
+
+function applyDemoSkinTheme() {
+  document.documentElement.setAttribute('data-demo-skin', getDemoSkinId());
+}
+
+function setDemoSkin(skinId) {
+  const id = String(skinId);
+  if (!DEMO_SKINS[id] || getDemoSkinId() === id) return;
+  state.demoSkin = id;
+  saveState(state);
+  applyDemoSkinTheme();
+  render();
+}
+
 function renderPortalLogo({ height = 32, className = 'portal-logo' } = {}) {
-  return `<img src="${BRAND_LOGO_PATH}" alt="ACME Lettings" class="${className}" height="${height}">`;
+  return `<img src="${getBrandLogoPath()}" alt="${escapeHtml(getBrandAlt())}" class="${className}" height="${height}">`;
 }
 
 function renderPortalIcon({ height = 20, className = 'portal-logo portal-logo--icon' } = {}) {
-  return `<img src="${BRAND_ICON_PATH}" alt="" class="${className}" height="${height}" aria-hidden="true">`;
+  return `<img src="${getBrandLogoPath()}" alt="" class="${className}" height="${height}" aria-hidden="true">`;
 }
 
 function renderDataloftLogo({ className = 'dataloft-logo', height = 20 } = {}) {
@@ -191,6 +244,10 @@ function renderRentalEvidenceReportModal() {
 }
 
 let state = loadState();
+if (!DEMO_SKINS[state.demoSkin]) {
+  state.demoSkin = '1';
+}
+applyDemoSkinTheme();
 let draftPortfolio = state.draftPortfolio || { name: '', properties: [] };
 
 function navigate(path) {
@@ -573,11 +630,14 @@ function propertyDemoSeed(property) {
           value: 72 + (seed % 20) + Math.round(Math.sin(i * 0.9 + seed) * 14) + i * 2,
         })),
         avgDaysOnMarketRentedMonth: 19 + (seed % 14),
-        rentChangeProportion: [
-          { label: 'No rent change', value: 58 + (seed % 8), color: '#2D95EC' },
-          { label: 'Rent reduced', value: 14 + (seed % 6), color: '#9eb8d4' },
-          { label: 'Rent increased', value: 18 + (seed % 7), color: '#1a6bb5' },
-        ],
+        rentChangeProportion: (() => {
+          const { primary, dark } = getBrandColors();
+          return [
+            { label: 'No rent change', value: 58 + (seed % 8), color: primary },
+            { label: 'Rent reduced', value: 14 + (seed % 6), color: `${primary}99` },
+            { label: 'Rent increased', value: 18 + (seed % 7), color: dark },
+          ];
+        })(),
         newRentalsByType: [
           { label: 'Detached', value: 8 + (seed % 6) },
           { label: 'Semi-det.', value: 14 + (seed % 8) },
@@ -936,11 +996,11 @@ function renderPropertyHero(property) {
 }
 
 const OVERVIEW_ICONS = {
-  key: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="var(--portal-primary)"/><path d="M12 6l1.2 3.6H17l-3 2.2 1.1 3.5L12 13.8 8.9 15.3 10 11.8 7 9.6h3.8L12 6z" fill="#fff"/></svg>`,
-  rent: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="var(--portal-primary)"/><path d="M12 7v5l3.5 2" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>`,
-  value: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="var(--portal-primary)"/><path d="M12 5l7 5.2V18H5V10.2L12 5zm0 2.4L7 10.6V16h10v-5.4l-5-3.2z" fill="#fff"/></svg>`,
-  financials: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="var(--portal-primary)"/><path d="M7 9h10v2H7V9zm0 4h6v2H7v-2z" fill="#fff"/></svg>`,
-  mortgage: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="var(--portal-primary)"/><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 2v3l2 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+  key: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="var(--portal-primary)"/><path d="M12 6l1.2 3.6H17l-3 2.2 1.1 3.5L12 13.8 8.9 15.3 10 11.8 7 9.6h3.8L12 6z" fill="var(--portal-on-primary)"/></svg>`,
+  rent: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="var(--portal-primary)"/><path d="M12 7v5l3.5 2" stroke="var(--portal-on-primary)" stroke-width="2" stroke-linecap="round"/></svg>`,
+  value: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="var(--portal-primary)"/><path d="M12 5l7 5.2V18H5V10.2L12 5zm0 2.4L7 10.6V16h10v-5.4l-5-3.2z" fill="var(--portal-on-primary)"/></svg>`,
+  financials: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="var(--portal-primary)"/><path d="M7 9h10v2H7V9zm0 4h6v2H7v-2z" fill="var(--portal-on-primary)"/></svg>`,
+  mortgage: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="var(--portal-primary)"/><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 2v3l2 1" stroke="var(--portal-on-primary)" stroke-width="1.5" stroke-linecap="round"/></svg>`,
 };
 
 function formatDaysOnMarket(days) {
@@ -3773,14 +3833,33 @@ function renderPortfolioReport(metrics, portfolio) {
   `;
 }
 
+function renderDemoSkinPicker() {
+  const activeId = getDemoSkinId();
+  return `
+    <div class="demo-skin-picker" role="group" aria-label="Demo brand">
+      ${Object.values(DEMO_SKINS).map((skin) => `
+        <button
+          type="button"
+          class="demo-skin-picker__btn${skin.id === activeId ? ' is-active' : ''}"
+          data-action="set-demo-skin"
+          data-skin="${skin.id}"
+          aria-pressed="${skin.id === activeId ? 'true' : 'false'}"
+          aria-label="Use ${escapeHtml(skin.label)} branding"
+          title="${escapeHtml(skin.label)}"
+        >${skin.id}</button>
+      `).join('')}
+    </div>
+  `;
+}
+
 function renderAccessGate() {
   app.innerHTML = `
     <div class="access-gate" id="access-gate">
       <div class="access-gate__panel">
         <img
           class="access-gate__logo"
-          src="${BRAND_LOGO_PATH}"
-          alt="ACME Lettings"
+          src="${getBrandLogoPath()}"
+          alt="${escapeHtml(getBrandAlt())}"
           height="40"
         >
         <h1 class="access-gate__title">Investor Landlord Portal</h1>
@@ -3803,11 +3882,21 @@ function renderAccessGate() {
           <p class="passcode-error" id="passcode-error" hidden>Incorrect code</p>
         </form>
       </div>
+      ${renderDemoSkinPicker()}
     </div>
   `;
 
   document.title = PAGE_TITLES.gate;
   bindPasscodeInputs();
+  bindDemoSkinPicker();
+}
+
+function bindDemoSkinPicker() {
+  document.querySelectorAll('[data-action="set-demo-skin"]').forEach((button) => {
+    button.addEventListener('click', () => {
+      setDemoSkin(button.dataset.skin);
+    });
+  });
 }
 
 function bindPasscodeInputs() {
@@ -4756,6 +4845,7 @@ function bindCommonActions() {
   document.querySelector('[data-action="logout"]')?.addEventListener('click', () => {
     state = {
       accessGranted: state.accessGranted,
+      demoSkin: getDemoSkinId(),
       loggedIn: false,
       portfolio: state.portfolio,
       draftPortfolio: null,

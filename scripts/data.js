@@ -1492,9 +1492,9 @@ export function computePortfolioMetrics(properties) {
 export function loadState() {
   try {
     const raw = sessionStorage.getItem('landlord-portal-state');
-    return raw ? JSON.parse(raw) : { accessGranted: false, loggedIn: false, portfolio: null };
+    return raw ? JSON.parse(raw) : { accessGranted: false, loggedIn: false, portfolio: null, demoSkin: '1' };
   } catch {
-    return { accessGranted: false, loggedIn: false, portfolio: null };
+    return { accessGranted: false, loggedIn: false, portfolio: null, demoSkin: '1' };
   }
 }
 
