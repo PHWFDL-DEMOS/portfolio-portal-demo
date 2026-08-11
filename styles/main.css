@@ -12,9 +12,43 @@
   --portal-focus: #2D95EC;
   --portal-danger: #c41e3a;
   --portal-danger-soft: #d85a6f;
+  --portal-on-primary: #ffffff;
+  --portal-on-primary-hover: #ffffff;
   --portal-radius: 8px;
   --portal-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   --portal-max-width: 1360px;
+}
+
+[data-demo-skin="2"] {
+  --portal-primary: #CF2F90;
+  --portal-primary-dark: #292C35;
+  --portal-primary-light: #FFFFFF;
+  --portal-text: #292C35;
+  --portal-text-muted: color-mix(in srgb, #292C35 58%, #FFFFFF);
+  --portal-border: color-mix(in srgb, #292C35 14%, #FFFFFF);
+  --portal-bg: #FFFFFF;
+  --portal-bg-alt: #FFFFFF;
+  --portal-focus: #CF2F90;
+  --portal-on-primary: #FFFFFF;
+  --portal-on-primary-hover: #FFFFFF;
+}
+
+[data-demo-skin="3"] {
+  --portal-primary: #F7CF46;
+  --portal-primary-dark: #12191F;
+  --portal-primary-light: #FFFFFF;
+  --portal-text: #12191F;
+  --portal-text-muted: color-mix(in srgb, #12191F 58%, #FFFFFF);
+  --portal-border: color-mix(in srgb, #12191F 14%, #FFFFFF);
+  --portal-bg: #FFFFFF;
+  --portal-bg-alt: #FFFFFF;
+  --portal-focus: #F7CF46;
+  --portal-on-primary: #12191F;
+  --portal-on-primary-hover: #FFFFFF;
+}
+
+[data-demo-skin="3"] .portfolio-report {
+  background: var(--portal-primary-dark);
 }
 
 *,
@@ -441,14 +475,14 @@ input::placeholder {
 
 .btn-primary {
   background: var(--portal-primary);
-  color: #fff;
+  color: var(--portal-on-primary);
   border-color: var(--portal-primary);
 }
 
 .btn-primary:hover {
   background: var(--portal-primary-dark);
   border-color: var(--portal-primary-dark);
-  color: #fff;
+  color: var(--portal-on-primary-hover);
 }
 
 .btn-secondary {
@@ -779,18 +813,19 @@ input::placeholder {
   border-radius: 999px;
   border: none;
   background: var(--portal-primary);
-  color: #fff;
+  color: var(--portal-on-primary);
   font: inherit;
   font-size: 0.8125rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.15s ease, box-shadow 0.15s ease;
+  transition: background 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
   white-space: nowrap;
 }
 
 .portfolio-report__goals-btn:hover,
 .portfolio-report__goals-btn:focus-visible {
   background: var(--portal-primary-dark);
+  color: var(--portal-on-primary-hover);
   outline: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -1368,7 +1403,7 @@ input::placeholder {
 .marketplace-card__media {
   position: relative;
   height: 140px;
-  background: linear-gradient(135deg, var(--portal-primary-light) 0%, #c5d9fc 100%);
+  background: linear-gradient(135deg, var(--portal-primary-light) 0%, color-mix(in srgb, var(--portal-primary) 28%, #FFFFFF) 100%);
 }
 
 .marketplace-card__media-label {
@@ -1410,7 +1445,7 @@ input::placeholder {
 }
 
 .marketplace-card--investor-club .marketplace-card__media {
-  background: linear-gradient(135deg, var(--portal-primary-light) 0%, #B8DCFA 55%, #9FCEF8 100%);
+  background: linear-gradient(135deg, var(--portal-primary-light) 0%, color-mix(in srgb, var(--portal-primary) 35%, #FFFFFF) 55%, color-mix(in srgb, var(--portal-primary) 48%, #FFFFFF) 100%);
 }
 
 .marketplace-card__epc-badge {
@@ -2090,6 +2125,49 @@ input::placeholder {
 .access-gate--error .passcode-digit {
   border-color: #dc4e45;
   animation: passcode-shake 0.4s ease;
+}
+
+.demo-skin-picker {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.demo-skin-picker__btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid rgba(36, 47, 55, 0.22);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  color: rgba(36, 47, 55, 0.5);
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(36, 47, 55, 0.06);
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+.demo-skin-picker__btn:hover {
+  border-color: rgba(36, 47, 55, 0.4);
+  color: rgba(36, 47, 55, 0.8);
+  background: #ffffff;
+}
+
+.demo-skin-picker__btn.is-active {
+  border-color: var(--portal-primary);
+  color: var(--portal-primary);
+  background: #ffffff;
+}
+
+.demo-skin-picker__btn:focus-visible {
+  outline: 2px solid var(--portal-primary);
+  outline-offset: 2px;
 }
 
 @keyframes passcode-shake {
