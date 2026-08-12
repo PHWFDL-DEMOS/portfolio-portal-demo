@@ -10,7 +10,7 @@ export const DEMO_PROPERTY = {
   mortgageProvider: 'NatWest',
   productType: 'Buy-to-Let Fixed',
   mortgageEndDate: '2029-04-01',
-  mortgageBalance: '312500',
+  mortgageBalance: '398000',
   paymentType: 'Repayment',
   monthlyPayments: '1045',
 };
@@ -476,7 +476,7 @@ export const DEMO_PROPERTIES = [
     mortgageProvider: 'NatWest',
     productType: 'Buy-to-Let Fixed',
     mortgageEndDate: '2029-04-01',
-    mortgageBalance: '312500',
+    mortgageBalance: '398000',
     paymentType: 'Repayment',
     monthlyPayments: '1045',
   },
@@ -492,7 +492,7 @@ export const DEMO_PROPERTIES = [
     mortgageProvider: 'Santander',
     productType: 'Tracker',
     mortgageEndDate: '2027-11-15',
-    mortgageBalance: '228000',
+    mortgageBalance: '185000',
     paymentType: 'Interest only',
     monthlyPayments: '580',
   },
@@ -1268,7 +1268,7 @@ export function getDemoFinancials(property, { highlightRefinance = false, highli
   const avm = Number(property.avmValue) || 400000;
   const seed = `${property.postcode || ''}${property.propertyNumber || ''}`.length;
   const purchasePrice = Math.round(avm * (0.90 + (seed % 3) * 0.02));
-  const remainingMortgage = Math.round(avm * (0.915 + (seed % 2) * 0.005));
+  const remainingMortgage = Math.round(avm * (0.63 + (seed % 5) * 0.01));
   const interestRate = highlightRefinance
     ? '5.85'
     : highlightRenewal
