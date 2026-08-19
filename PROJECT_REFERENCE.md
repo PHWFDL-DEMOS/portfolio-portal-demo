@@ -19,9 +19,8 @@ Demonstration prototype. **Not a production application.** No real authenticatio
 
 ## Demo entry
 
-1. **Access code** — enter PIN `777212` on the demo access screen.
-2. **Login** — click-through only; sets `state.loggedIn = true`.
-3. **Dashboard** — create portfolio or view existing.
+1. **Login** — click-through only; sets `state.loggedIn = true`.
+2. **Dashboard** — create portfolio or view existing.
 
 State fields: `accessGranted`, `loggedIn`, `portfolio`, `draftPortfolio`.
 
