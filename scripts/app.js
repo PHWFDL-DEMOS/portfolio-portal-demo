@@ -119,6 +119,12 @@ const DEMO_SKINS = {
     logo: 'assets/A1.png',
     colors: { primary: '#F7CF46', dark: '#12191F' },
   },
+  4: {
+    id: '4',
+    label: 'Brand 4',
+    logo: 'assets/b1.png',
+    colors: { primary: '#4EACE9', dark: '#217DB5' },
+  },
 };
 
 const DATALOFT_LOGO_PATH = 'assets/dataloft-logo.png';
@@ -2407,6 +2413,12 @@ function renderPortfolioImpactRows(beforeMetrics, afterMetrics) {
       beforeMetrics.totalMortgageBalance,
       afterMetrics.totalMortgageBalance,
       (value) => formatCurrency(value),
+    ),
+    renderPortfolioComparisonRow(
+      'Total monthly mortgage payment',
+      beforeMetrics.totalMortgageMonthly,
+      afterMetrics.totalMortgageMonthly,
+      (value) => `${formatCurrency(value)}<span class="cell-suffix">/mo</span>`,
     ),
     renderPortfolioComparisonRow(
       'Total equity',

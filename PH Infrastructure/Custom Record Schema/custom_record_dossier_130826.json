@@ -1,0 +1,409 @@
+{
+    "type": "object",
+    "properties": {
+        "financials": {
+            "type": "object",
+            "properties": {
+                "achieved_monthly_rent": {
+                    "type": "integer",
+                    "example": 1850
+                },
+                "gross_yield": {
+                    "type": "number",
+                    "example": 0.036
+                },
+                "property_ltv": {
+                    "type": "number",
+                    "example": 0.65
+                },
+                "property_purchase_value": {
+                    "type": "integer",
+                    "example": 550000
+                },
+                "property_purchase_date": {
+                    "type": "string",
+                    "example": "2019-06-01"
+                },
+                "investor_club": {
+                    "type": "string",
+                    "example": "Member"
+                },
+                "hmo_property": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "hmo_details": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "room_reference": {
+                                "type": "string",
+                                "example": "1"
+                            },
+                            "tenant": {
+                                "type": "string",
+                                "example": "S. Taylor"
+                            },
+                            "start_date": {
+                                "type": "string",
+                                "example": "2024-01-01"
+                            },
+                            "end_date": {
+                                "type": "string",
+                                "example": "2025-12-31"
+                            },
+                            "monthly_rent": {
+                                "type": "integer",
+                                "example": 650
+                            },
+                            "agreement_type": {
+                                "type": "string",
+                                "example": "Assured shorthold"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "opportunities": {
+            "type": "object",
+            "properties": {
+                "opportunity_payment_saving": {
+                    "type": "object",
+                    "properties": {
+                        "active": {
+                            "type": "string",
+                            "example": "true"
+                        },
+                        "current_rate": {
+                            "type": "number",
+                            "example": 0.0585
+                        },
+                        "best_rate": {
+                            "type": "number",
+                            "example": 0.0499
+                        },
+                        "monthly_saving": {
+                            "type": "integer",
+                            "example": 286
+                        },
+                        "illustration": {
+                            "type": "object",
+                            "properties": {
+                                "new_monthly_payment": {
+                                    "type": "integer",
+                                    "example": 1654
+                                },
+                                "estimated_monthly_saving": {
+                                    "type": "integer",
+                                    "example": 286
+                                },
+                                "portfolio_impact": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total_portfolio_value": {
+                                            "type": "integer",
+                                            "example": 1852000
+                                        },
+                                        "total_mortgage_balance": {
+                                            "type": "integer",
+                                            "example": 1110000
+                                        },
+                                        "total_equity": {
+                                            "type": "integer",
+                                            "example": 742000
+                                        },
+                                        "portfolio_ltv": {
+                                            "type": "number",
+                                            "example": 0.59
+                                        },
+                                        "total_market_rent": {
+                                            "type": "integer",
+                                            "example": 7800
+                                        },
+                                        "total_achieved_rent": {
+                                            "type": "integer",
+                                            "example": 6950
+                                        },
+                                        "gross_yield": {
+                                            "type": "number",
+                                            "example": 0.05
+                                        },
+                                        "interest_coverage_ratio": {
+                                            "type": "number",
+                                            "example": 1.43
+                                        },
+                                        "total_properties": {
+                                            "type": "integer",
+                                            "example": 4
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "mortgage_renewal_opportunity": {
+                    "type": "object",
+                    "properties": {
+                        "active": {
+                            "type": "string",
+                            "example": "true"
+                        },
+                        "best_rate": {
+                            "type": "number",
+                            "example": 0.0494
+                        },
+                        "illustration": {
+                            "type": "object",
+                            "properties": {
+                                "new_monthly_payment": {
+                                    "type": "integer",
+                                    "example": 1654
+                                },
+                                "estimated_monthly_saving": {
+                                    "type": "integer",
+                                    "example": 286
+                                },
+                                "portfolio_impact": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total_portfolio_value": {
+                                            "type": "integer",
+                                            "example": 1852000
+                                        },
+                                        "total_mortgage_balance": {
+                                            "type": "integer",
+                                            "example": 1110000
+                                        },
+                                        "total_equity": {
+                                            "type": "integer",
+                                            "example": 742000
+                                        },
+                                        "portfolio_ltv": {
+                                            "type": "number",
+                                            "example": 0.59
+                                        },
+                                        "total_market_rent": {
+                                            "type": "integer",
+                                            "example": 7800
+                                        },
+                                        "total_achieved_rent": {
+                                            "type": "integer",
+                                            "example": 6950
+                                        },
+                                        "gross_yield": {
+                                            "type": "number",
+                                            "example": 0.05
+                                        },
+                                        "interest_coverage_ratio": {
+                                            "type": "number",
+                                            "example": 1.43
+                                        },
+                                        "total_properties": {
+                                            "type": "integer",
+                                            "example": 4
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "rent_opportunity": {
+                    "type": "object",
+                    "properties": {
+                        "active": {
+                            "type": "string",
+                            "example": "true"
+                        },
+                        "monthly_uplift": {
+                            "type": "integer",
+                            "example": 550
+                        },
+                        "annual_uplift": {
+                            "type": "integer",
+                            "example": 6600
+                        }
+                    }
+                },
+                "opportunities_count": {
+                    "type": "string",
+                    "example": "2"
+                }
+            }
+        },
+        "property_risk": {
+            "type": "object",
+            "properties": {
+                "current": {
+                    "type": "object",
+                    "properties": {
+                        "flood_river_sea_high": {
+                            "type": "string",
+                            "example": "false"
+                        },
+                        "flood_river_sea_medium": {
+                            "type": "string",
+                            "example": "false"
+                        },
+                        "flood_river_sea_low": {
+                            "type": "string",
+                            "example": "true"
+                        },
+                        "flood_surface_water_high": {
+                            "type": "string",
+                            "example": "false"
+                        },
+                        "flood_surface_water_medium": {
+                            "type": "string",
+                            "example": "true"
+                        },
+                        "flood_surface_water_low": {
+                            "type": "string",
+                            "example": "false"
+                        },
+                        "chancel_liability_high": {
+                            "type": "string",
+                            "example": "false"
+                        },
+                        "chancel_liability_medium": {
+                            "type": "string",
+                            "example": "false"
+                        },
+                        "chancel_liability_low": {
+                            "type": "string",
+                            "example": "true"
+                        },
+                        "subsidence_high": {
+                            "type": "string",
+                            "example": "false"
+                        },
+                        "subsidence_medium": {
+                            "type": "string",
+                            "example": "false"
+                        },
+                        "subsidence_low": {
+                            "type": "string",
+                            "example": "true"
+                        },
+                        "cladding_high": {
+                            "type": "string",
+                            "example": "false"
+                        },
+                        "cladding_medium": {
+                            "type": "string",
+                            "example": "false"
+                        },
+                        "cladding_low": {
+                            "type": "string",
+                            "example": "true"
+                        }
+                    }
+                },
+                "change": {
+                    "type": "object",
+                    "properties": {
+                        "flood_river_sea": {
+                            "type": "string",
+                            "example": "worsened"
+                        },
+                        "flood_surface_water": {
+                            "type": "string",
+                            "example": "unchanged"
+                        },
+                        "chancel_liability": {
+                            "type": "string",
+                            "example": "unchanged"
+                        },
+                        "subsidence": {
+                            "type": "string",
+                            "example": "unchanged"
+                        },
+                        "cladding": {
+                            "type": "string",
+                            "example": "unchanged"
+                        }
+                    }
+                }
+            }
+        },
+        "alerts": {
+            "type": "object",
+            "properties": {
+                "insurance_review_required": {
+                    "type": "string",
+                    "example": "true"
+                },
+                "epc_improvement": {
+                    "type": "object",
+                    "properties": {
+                        "illustration": {
+                            "type": "object",
+                            "properties": {
+                                "new_monthly_payment": {
+                                    "type": "integer",
+                                    "example": 1654
+                                },
+                                "additional_monthly_payment": {
+                                    "type": "integer",
+                                    "example": 286
+                                },
+                                "additional_borrowing": {
+                                    "type": "integer",
+                                    "example": 6500
+                                },
+                                "portfolio_impact": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total_portfolio_value": {
+                                            "type": "integer",
+                                            "example": 1852000
+                                        },
+                                        "total_mortgage_balance": {
+                                            "type": "integer",
+                                            "example": 1110000
+                                        },
+                                        "total_equity": {
+                                            "type": "integer",
+                                            "example": 742000
+                                        },
+                                        "portfolio_ltv": {
+                                            "type": "number",
+                                            "example": 0.59
+                                        },
+                                        "total_market_rent": {
+                                            "type": "integer",
+                                            "example": 7800
+                                        },
+                                        "total_achieved_rent": {
+                                            "type": "integer",
+                                            "example": 6950
+                                        },
+                                        "gross_yield": {
+                                            "type": "number",
+                                            "example": 0.05
+                                        },
+                                        "interest_coverage_ratio": {
+                                            "type": "number",
+                                            "example": 1.43
+                                        },
+                                        "total_properties": {
+                                            "type": "integer",
+                                            "example": 4
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "alert_count": {
+                    "type": "string",
+                    "example": "1"
+                }
+            }
+        }
+    }
+}

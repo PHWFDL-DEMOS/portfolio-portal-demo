@@ -51,6 +51,20 @@
   background: var(--portal-primary-dark);
 }
 
+[data-demo-skin="4"] {
+  --portal-primary: #4EACE9;
+  --portal-primary-dark: #217DB5;
+  --portal-primary-light: #FFFFFF;
+  --portal-text: #333333;
+  --portal-text-muted: #666666;
+  --portal-border: #E0E0E0;
+  --portal-bg: #FFFFFF;
+  --portal-bg-alt: #FFFFFF;
+  --portal-focus: #4EACE9;
+  --portal-on-primary: #FFFFFF;
+  --portal-on-primary-hover: #FFFFFF;
+}
+
 *,
 *::before,
 *::after {

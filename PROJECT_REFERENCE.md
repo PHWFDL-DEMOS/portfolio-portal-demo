@@ -8,8 +8,8 @@ Demonstration prototype. **Not a production application.** No real authenticatio
 
 | Item | Value |
 |------|-------|
-| **GitHub** | https://github.com/PHWFDL-DEMOS/landlord-portal-demo |
-| **Live demo** | https://phwfdl-demos.github.io/landlord-portal-demo/ |
+| **GitHub** | https://github.com/PHWFDL-DEMOS/portfolio-portal-demo |
+| **Live demo** | https://phwfdl-demos.github.io/portfolio-portal-demo/ |
 | **Stack** | Static HTML / CSS / vanilla JS (ES modules) |
 | **Entry** | `index.html` → `scripts/app.js` |
 | **State** | `sessionStorage` key `landlord-portal-state` |

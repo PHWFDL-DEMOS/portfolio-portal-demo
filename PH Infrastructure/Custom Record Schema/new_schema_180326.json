@@ -1,0 +1,1670 @@
+{
+    "type": "object",
+    "properties": {
+        "surplus": {
+            "type": "object",
+            "properties": {
+                "totalMonthlySurplus": {
+                    "type": "number",
+                    "example": 250
+                },
+                "totalAnnualSurplus": {
+                    "type": "number",
+                    "example": 2500
+                }
+            }
+        },
+        "property": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "hoaDues": {
+                        "type": "number",
+                        "example": 100
+                    },
+                    "dossierid": {
+                        "type": "string",
+                        "example": "d6864612-9fd4-4ec6-92bd-c2b4a17cb3ac"
+                    },
+                    "propertyTax": {
+                        "type": "number",
+                        "example": 100
+                    },
+                    "rentalIncome": {
+                        "type": "number",
+                        "example": 100
+                    },
+                    "rentalExpenses": {
+                        "type": "number",
+                        "example": 100
+                    },
+                    "propertyAddress": {
+                        "type": "string",
+                        "example": "123 Market St, San Francisco, CA"
+                    },
+                    "typeInvestmentMainHome": {
+                        "type": "string",
+                        "example": "Investment"
+                    },
+                    "pageLink": {
+                        "type": "string",
+                        "example": "https://app.example.com/property/701cdd77"
+                    },
+                    "pmiPayment": {
+                        "type": "number",
+                        "example": 150
+                    },
+                    "purchaseDate": {
+                        "type": "string",
+                        "example": "1984-06-15"
+                    },
+                    "floodInsurance": {
+                        "type": "number",
+                        "example": 150
+                    },
+                    "houseInsurance": {
+                        "type": "number",
+                        "example": 150
+                    }
+                }
+            }
+        },
+        "dashboard": {
+            "type": "object",
+            "properties": {
+                "emergencyFundNeed": {
+                    "type": "number",
+                    "example": 1200
+                }
+            }
+        },
+        "dimeClient": {
+            "type": "object",
+            "properties": {
+                "total": {
+                    "type": "object",
+                    "properties": {
+                        "avg": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "max": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "min": {
+                            "type": "number",
+                            "example": 1200
+                        }
+                    }
+                },
+                "income": {
+                    "type": "object",
+                    "properties": {
+                        "avg": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "max": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "min": {
+                            "type": "number",
+                            "example": 1200
+                        }
+                    }
+                },
+                "mortgage": {
+                    "type": "object",
+                    "properties": {
+                        "avg": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "max": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "min": {
+                            "type": "number",
+                            "example": 1200
+                        }
+                    }
+                },
+                "cashValue": {
+                    "type": "object",
+                    "properties": {
+                        "avg": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "max": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "min": {
+                            "type": "number",
+                            "example": 1200
+                        }
+                    }
+                },
+                "education": {
+                    "type": "object",
+                    "properties": {
+                        "avg": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "max": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "min": {
+                            "type": "number",
+                            "example": 1200
+                        }
+                    }
+                }
+            }
+        },
+        "dimeSpouse": {
+            "type": "object",
+            "properties": {
+                "total": {
+                    "type": "object",
+                    "properties": {
+                        "avg": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "max": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "min": {
+                            "type": "number",
+                            "example": 1200
+                        }
+                    }
+                },
+                "income": {
+                    "type": "object",
+                    "properties": {
+                        "avg": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "max": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "min": {
+                            "type": "number",
+                            "example": 1200
+                        }
+                    }
+                },
+                "mortgage": {
+                    "type": "object",
+                    "properties": {
+                        "avg": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "max": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "min": {
+                            "type": "number",
+                            "example": 1200
+                        }
+                    }
+                },
+                "cashValue": {
+                    "type": "object",
+                    "properties": {
+                        "avg": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "max": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "min": {
+                            "type": "number",
+                            "example": 1200
+                        }
+                    }
+                },
+                "education": {
+                    "type": "object",
+                    "properties": {
+                        "avg": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "max": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "min": {
+                            "type": "number",
+                            "example": 1200
+                        }
+                    }
+                }
+            }
+        },
+        "assetsChart": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "assetValue": {
+                        "type": "number",
+                        "example": 5000
+                    },
+                    "assetCategory": {
+                        "type": "string",
+                        "example": "Savings"
+                    }
+                }
+            }
+        },
+        "liabilities": {
+            "type": "object",
+            "properties": {
+                "heloc": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "balance": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "reference": {
+                                "type": "string",
+                                "example": "abc123"
+                            },
+                            "actualPaid": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "minimumDue": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "interestRate": {
+                                "type": "number",
+                                "example": 5.25
+                            },
+                            "propertyValueOrCreditLimit": {
+                                "type": "number",
+                                "example": 250000
+                            }
+                        }
+                    }
+                },
+                "other": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "balance": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "reference": {
+                                "type": "string",
+                                "example": "abc123"
+                            },
+                            "actualPaid": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "minimumDue": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "interestRate": {
+                                "type": "number",
+                                "example": 5.25
+                            },
+                            "propertyValueOrCreditLimit": {
+                                "type": "number",
+                                "example": 250000
+                            }
+                        }
+                    }
+                },
+                "total": {
+                    "type": "object",
+                    "properties": {
+                        "balance": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "actualPaid": {
+                            "type": "number",
+                            "example": 250
+                        },
+                        "minimumDue": {
+                            "type": "number",
+                            "example": 250
+                        },
+                        "interestRate": {
+                            "type": "number",
+                            "example": 5.25
+                        },
+                        "propertyValueOrCreditLimit": {
+                            "type": "number",
+                            "example": 250000
+                        }
+                    }
+                },
+                "mortgage": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "balance": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "reference": {
+                                "type": "string",
+                                "example": "abc123"
+                            },
+                            "actualPaid": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "minimumDue": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "interestRate": {
+                                "type": "number",
+                                "example": 5.25
+                            },
+                            "propertyValueOrCreditLimit": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "remainingYears": {
+                                "type": "number",
+                                "example": 18
+                            }
+                        }
+                    }
+                },
+                "netWorth": {
+                    "type": "number",
+                    "example": 250000
+                },
+                "creditCard": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "balance": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "reference": {
+                                "type": "string",
+                                "example": "abc123"
+                            },
+                            "actualPaid": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "minimumDue": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "interestRate": {
+                                "type": "number",
+                                "example": 5.25
+                            },
+                            "propertyValueOrCreditLimit": {
+                                "type": "number",
+                                "example": 250000
+                            }
+                        }
+                    }
+                },
+                "reallocate": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "studentLoan": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "balance": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "reference": {
+                                "type": "string",
+                                "example": "abc123"
+                            },
+                            "actualPaid": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "minimumDue": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "interestRate": {
+                                "type": "number",
+                                "example": 5.25
+                            },
+                            "propertyValueOrCreditLimit": {
+                                "type": "number",
+                                "example": 250000
+                            }
+                        }
+                    }
+                },
+                "personalLoan": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "balance": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "reference": {
+                                "type": "string",
+                                "example": "abc123"
+                            },
+                            "actualPaid": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "minimumDue": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "interestRate": {
+                                "type": "number",
+                                "example": 5.25
+                            },
+                            "propertyValueOrCreditLimit": {
+                                "type": "number",
+                                "example": 250000
+                            }
+                        }
+                    }
+                },
+                "carLoanBalance": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "balance": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "reference": {
+                                "type": "string",
+                                "example": "abc123"
+                            },
+                            "actualPaid": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "minimumDue": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "interestRate": {
+                                "type": "number",
+                                "example": 5.25
+                            },
+                            "propertyValueOrCreditLimit": {
+                                "type": "number",
+                                "example": 250000
+                            }
+                        }
+                    }
+                },
+                "investmentProperty": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "balance": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "reference": {
+                                "type": "string",
+                                "example": "abc123"
+                            },
+                            "actualPaid": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "minimumDue": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "interestRate": {
+                                "type": "number",
+                                "example": 5.25
+                            },
+                            "propertyValueOrCreditLimit": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "remainingYears": {
+                                "type": "number",
+                                "example": 18
+                            }
+                        }
+                    }
+                },
+                "lifeInsuranceCvLoan": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "balance": {
+                                "type": "number",
+                                "example": 250000
+                            },
+                            "reference": {
+                                "type": "string",
+                                "example": "abc123"
+                            },
+                            "actualPaid": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "minimumDue": {
+                                "type": "number",
+                                "example": 250
+                            },
+                            "interestRate": {
+                                "type": "number",
+                                "example": 5.25
+                            },
+                            "propertyValueOrCreditLimit": {
+                                "type": "number",
+                                "example": 250000
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "totalAssets": {
+            "type": "object",
+            "properties": {
+                "total": {
+                    "type": "number",
+                    "example": 250000
+                }
+            }
+        },
+        "totalIncome": {
+            "type": "object",
+            "properties": {
+                "annualTax": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "totalGross": {
+                    "type": "number",
+                    "example": 250000
+                },
+                "annualGross": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "childSupport": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "monthlyGross": {
+                    "type": "number",
+                    "example": 250
+                },
+                "rentalIncome": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "annualBonuses": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "socialSecurity": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "averageAnnualTax": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "otherTaxableIncome": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "totalMonthlyIncome": {
+                    "type": "number",
+                    "example": 250
+                }
+            }
+        },
+        "clientAssets": {
+            "type": "object",
+            "properties": {
+                "roth": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "other": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "total": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "savings": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "realEstate": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "401k403b457": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "pensions403b": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "fixedAnnuities": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "traditionalIra": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "education529Plan": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "rsuEsopEsppStocks": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "cashValueLifeInsurance": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                }
+            }
+        },
+        "clientIncome": {
+            "type": "object",
+            "properties": {
+                "annualTax": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "totalGross": {
+                    "type": "number",
+                    "example": 250000
+                },
+                "annualGross": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "childSupport": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "monthlyGross": {
+                    "type": "number",
+                    "example": 250
+                },
+                "rentalIncome": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "annualBonuses": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "socialSecurity": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "averageAnnualTax": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "otherTaxableIncome": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "totalMonthlyIncome": {
+                    "type": "number",
+                    "example": 250
+                }
+            }
+        },
+        "spouseAssets": {
+            "type": "object",
+            "properties": {
+                "roth": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "other": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "total": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "savings": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "realEstate": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "401k403b457": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "pensions403b": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "fixedAnnuities": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "traditionalIra": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "education529Plan": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "rsuEsopEsppStocks": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "companyMatch": {
+                            "type": "number",
+                            "example": 1200
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                },
+                "cashValueLifeInsurance": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "contribution": {
+                            "type": "number",
+                            "example": 250
+                        }
+                    }
+                }
+            }
+        },
+        "spouseIncome": {
+            "type": "object",
+            "properties": {
+                "annualTax": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "totalGross": {
+                    "type": "number",
+                    "example": 250000
+                },
+                "annualGross": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "childSupport": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "monthlyGross": {
+                    "type": "number",
+                    "example": 250
+                },
+                "rentalIncome": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "annualBonuses": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "socialSecurity": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "averageAnnualTax": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "otherTaxableIncome": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "totalMonthlyIncome": {
+                    "type": "number",
+                    "example": 250
+                }
+            }
+        },
+        "clientDetails": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "example": "alex@example.com"
+                },
+                "smoker": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "lastName": {
+                    "type": "string",
+                    "example": "Smith"
+                },
+                "location": {
+                    "type": "string",
+                    "example": "San Francisco, CA"
+                },
+                "referrer": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string",
+                    "example": "John"
+                },
+                "usCitizen": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "employment": {
+                    "type": "string"
+                },
+                "occupation": {
+                    "type": "string"
+                },
+                "companyName": {
+                    "type": "string",
+                    "example": "Example Name"
+                },
+                "dateOfBirth": {
+                    "type": "string",
+                    "example": "1984-06-15"
+                },
+                "phoneNumber": {
+                    "type": "string",
+                    "example": "+1 415 555 0132"
+                },
+                "maritalStatus": {
+                    "type": "string",
+                    "example": "Married"
+                },
+                "creditScore": {
+                    "type": "number",
+                    "example": 800
+                }
+            }
+        },
+        "lifeInsurance": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "example": "Standard"
+                    },
+                    "rating": {
+                        "type": "string",
+                        "example": "abc123"
+                    },
+                    "company": {
+                        "type": "string",
+                        "example": "Acme Corp"
+                    },
+                    "premium": {
+                        "type": "number",
+                        "example": 250
+                    },
+                    "cashValue": {
+                        "type": "number",
+                        "example": 250000
+                    },
+                    "deathBenefit": {
+                        "type": "number",
+                        "example": 250000
+                    },
+                    "ownerInsured": {
+                        "type": "string",
+                        "example": "John Smith"
+                    }
+                }
+            }
+        },
+        "opportunities": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "opportunityText": {
+                        "type": "string",
+                        "example": "Your property equity has increased by"
+                    },
+                    "opportunityTime": {
+                        "type": "string",
+                        "example": "per month"
+                    },
+                    "opportunityValue": {
+                        "type": "number",
+                        "example": 500
+                    }
+                }
+            }
+        },
+        "spouseDetails": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "example": "alex@example.com"
+                },
+                "smoker": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "lastName": {
+                    "type": "string",
+                    "example": "Smith"
+                },
+                "location": {
+                    "type": "string",
+                    "example": "San Francisco, CA"
+                },
+                "referrer": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string",
+                    "example": "Jane"
+                },
+                "usCitizen": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "employment": {
+                    "type": "string"
+                },
+                "occupation": {
+                    "type": "string"
+                },
+                "companyName": {
+                    "type": "string",
+                    "example": "Example Name"
+                },
+                "dateOfBirth": {
+                    "type": "string",
+                    "example": "1984-06-15"
+                },
+                "phoneNumber": {
+                    "type": "string",
+                    "example": "+1 415 555 0132"
+                },
+                "maritalStatus": {
+                    "type": "string",
+                    "example": "Married"
+                },
+                "creditScore": {
+                    "type": "number",
+                    "example": 800
+                }
+            }
+        },
+        "estatePlanning": {
+            "type": "object",
+            "properties": {
+                "wills": {
+                    "type": "string",
+                    "example": "1984-06-15"
+                },
+                "trusts": {
+                    "type": "string",
+                    "example": "1984-06-15"
+                },
+                "powersOfAttorney": {
+                    "type": "string",
+                    "example": "1984-06-15"
+                }
+            }
+        },
+        "retirementGoal": {
+            "type": "object",
+            "properties": {
+                "age": {
+                    "type": "object",
+                    "properties": {
+                        "current": {
+                            "type": "number",
+                            "example": 65
+                        },
+                        "optimised": {
+                            "type": "number",
+                            "example": 67
+                        },
+                        "ratio": {
+                            "type": "number",
+                            "example": 1.03
+                        },
+                        "difference": {
+                            "type": "number",
+                            "example": 2
+                        }
+                    }
+                },
+                "netWorth": {
+                    "type": "object",
+                    "properties": {
+                        "previous": {
+                            "type": "number",
+                            "example": 250000
+                        },
+                        "change": {
+                            "type": "number",
+                            "example": 15000
+                        },
+                        "target": {
+                            "type": "number",
+                            "example": 300000
+                        }
+                    }
+                },
+                "income": {
+                    "type": "number",
+                    "example": 1200
+                }
+            }
+        },
+        "childrenDetails": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Billy Smith"
+                    },
+                    "dateOfBirth": {
+                        "type": "string",
+                        "example": "1984-06-15"
+                    }
+                }
+            }
+        },
+        "liabilitiesChart": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "liabilityValue": {
+                        "type": "number",
+                        "example": 5000
+                    },
+                    "liabilityCategory": {
+                        "type": "string",
+                        "example": "Savings"
+                    }
+                }
+            }
+        },
+        "householdExpenses": {
+            "type": "object",
+            "properties": {
+                "rent": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "amount": {
+                                "type": "number",
+                                "example": 1200
+                            },
+                            "propertyId": {
+                                "type": "string",
+                                "example": "d6864612-9fd4-4ec6-92bd-c2b4a17cb3ac"
+                            }
+                        }
+                    }
+                },
+                "other": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "travel": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "gasoline": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "groceries": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "utilities": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "memberships": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "carInsurance": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "amount": {
+                                "type": "number",
+                                "example": 1200
+                            },
+                            "identifier": {
+                                "type": "string",
+                                "example": "abc123"
+                            }
+                        }
+                    }
+                },
+                "comsServices": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "personalCare": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "entertainment": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "lifeInsurance": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "amount": {
+                                "type": "number",
+                                "example": 1200
+                            },
+                            "identifier": {
+                                "type": "string",
+                                "example": "abc123"
+                            }
+                        }
+                    }
+                },
+                "healthInsurance": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "amount": {
+                                "type": "number",
+                                "example": 1200
+                            },
+                            "identifier": {
+                                "type": "string",
+                                "example": "abc123"
+                            }
+                        }
+                    }
+                },
+                "afterschoolClubs": {
+                    "type": "number",
+                    "example": 1200
+                },
+                "totalMonthlyExpenses": {
+                    "type": "number",
+                    "example": 250
+                },
+                "childrenSEducationSavings529": {
+                    "type": "number",
+                    "example": 1200
+                }
+            }
+        },
+        "lifeInsuranceTotal": {
+            "type": "object",
+            "properties": {
+                "premium": {
+                    "type": "number",
+                    "example": 250
+                },
+                "cashValue": {
+                    "type": "number",
+                    "example": 250000
+                },
+                "deathBenefit": {
+                    "type": "number",
+                    "example": 250000
+                }
+            }
+        },
+        "eventsLog": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2025-01-15T14:30:00Z"
+                    },
+                    "action": {
+                        "type": "string",
+                        "example": "Updated rental income for property dossier 701cdd77"
+                    }
+                }
+            }
+        },
+        "wealthSummary": {
+            "type": "object",
+            "properties": {
+                "totalEquity": {
+                    "type": "number",
+                    "example": 1579235
+                },
+                "propertyCount": {
+                    "type": "number",
+                    "example": 4
+                },
+                "wealthShare": {
+                    "type": "number",
+                    "example": 0.62
+                },
+                "propertyIncome": {
+                    "type": "number",
+                    "example": 9600
+                },
+                "totalAssets": {
+                    "type": "number",
+                    "example": 4121556
+                },
+                "totalLiabilities": {
+                    "type": "number",
+                    "example": 1052500
+                },
+                "netWorth": {
+                    "type": "number",
+                    "example": 1052500
+                },
+                "idleCash": {
+                    "type": "number",
+                    "example": 1052500
+                },
+                "idleOptimisedCash": {
+                    "type": "number",
+                    "example": 1052500
+                },
+                "opportunitiesCount": {
+                    "type": "number",
+                    "example": 1052500
+                },
+                "homeAddress": {
+                    "type": "string",
+                    "example": "123 Market St, San Francisco, CA"
+                },
+                "homeValue": {
+                    "type": "number",
+                    "example": 1052500
+                },
+                "homeValueIncrease": {
+                    "type": "number",
+                    "example": 1052500
+                },
+                "homeLink": {
+                    "type": "string",
+                    "example": "https://app.example.com/property/701cdd77"
+                },
+                "dti": {
+                    "type": "number",
+                    "example": 0.36
+                }
+            }
+        },
+        "opportunitySummary": {
+            "type": "object",
+            "properties": {
+                "monthly": {
+                    "type": "number",
+                    "example": 1350
+                },
+                "capital": {
+                    "type": "number",
+                    "example": 75000
+                },
+                "customOpportunity": {
+                    "type": "string",
+                    "example": "My custom opportunity text"
+                }
+            }
+        },
+        "notifications": {
+            "type": "object",
+            "properties": {
+                "frequency": {
+                    "type": "string",
+                    "example": "monthly"
+                }
+            }
+        },
+        "onboarding": {
+            "type": "object",
+            "properties": {
+                "lead_id": {
+                    "type": "string",
+                    "example": "d6864612-9fd4-4ec6-92bd-c2b4a17cb3ac"
+                },
+                "link_id": {
+                    "type": "string",
+                    "example": "d6864612-9fd4-4ec6-92bd-c2b4a17cb3ac"
+                },
+                 "dossier_id": {
+                    "type": "string",
+                    "example": "d6864612-9fd4-4ec6-92bd-c2b4a17cb3ac"
+                },
+                 "onboarding": {
+                    "type": "string",
+                    "example": "TO BE ONBOARDED"
+                }
+            }
+        }
+    }
+}

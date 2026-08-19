@@ -1,0 +1,202 @@
+{
+    "type": "object",
+    "properties": {
+        "portfolio_overview": {
+            "type": "object",
+            "properties": {
+                "total_portfolio_value": {
+                    "type": "integer",
+                    "example": 742000
+                },
+                "total_mortgage_balance": {
+                    "type": "integer",
+                    "example": 1110000
+                },
+                "total_equity": {
+                    "type": "integer",
+                    "example": 742000
+                },
+                "total_equity_proportion": {
+                    "type": "number",
+                    "example": 0.4
+                },
+                "portfolio_ltv": {
+                    "type": "number",
+                    "example": 0.59
+                },
+                "total_market_rent": {
+                    "type": "integer",
+                    "example": 7800
+                },
+                "total_achieved_rent": {
+                    "type": "integer",
+                    "example": 6950
+                },
+                "occupied_properties": {
+                    "type": "integer",
+                    "example": 3
+                },
+                "total_properties": {
+                    "type": "integer",
+                    "example": 4
+                },
+                "rent_performance": {
+                    "type": "number",
+                    "example": 0.89
+                },
+                "occupancy_rate": {
+                    "type": "number",
+                    "example": 0.75
+                },
+                "gross_yield": {
+                    "type": "number",
+                    "example": 0.05
+                },
+                "interest_coverage_ratio": {
+                    "type": "number",
+                    "example": 1.43
+                },
+                "portfolio_value_change": {
+                    "type": "integer",
+                    "example": 22224
+                },
+                "portfolio_value_change_percentage": {
+                    "type": "number",
+                    "example": 0.012
+                },
+                "incomplete_property_details": {
+                    "type": "string",
+                    "example": "2 properties missing mortgage details"
+                },
+                "equity_opportunity": {
+                    "type": "string",
+                    "example": "\u00a350,000+ equity available for further investment"
+                },
+                "portfolio_value_change_chart": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "period": {
+                                "type": "integer",
+                                "example": 2026
+                            },
+                            "portfolio_value": {
+                                "type": "integer",
+                                "example": 1852000
+                            },
+                            "portfolio_value_change": {
+                                "type": "number",
+                                "example": 0.012
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "investment_goals": {
+            "type": "object",
+            "properties": {
+                "short_term_goal": {
+                    "type": "string",
+                    "example": "Increase rental yield across the portfolio"
+                },
+                "medium_term_goal": {
+                    "type": "string",
+                    "example": "Acquire 2 additional buy-to-let properties"
+                },
+                "long_term_goal": {
+                    "type": "string",
+                    "example": "Build a self-funding retirement portfolio"
+                },
+                "strategy": {
+                    "type": "string",
+                    "example": "Buy and hold"
+                },
+                "risk": {
+                    "type": "string",
+                    "example": "Moderate"
+                },
+                "funding": {
+                    "type": "string",
+                    "example": "Mortgage finance"
+                },
+                "involvement": {
+                    "type": "string",
+                    "example": "Fully managed"
+                }
+            }
+        },
+        "filtered_listings": {
+            "type": "object",
+            "properties": {
+                "illustration": {
+                    "type": "object",
+                    "properties": {
+                        "estimated_monthly_payment": {
+                            "type": "integer",
+                            "example": 1654
+                        },
+                        "indicative_deposit": {
+                            "type": "integer",
+                            "example": 66250
+                        },
+                        "indicative_loan_amount": {
+                            "type": "integer",
+                            "example": 198750
+                        },
+                        "indicative_interest_rate": {
+                            "type": "number",
+                            "example": 0.0529
+                        },
+                        "estimated_gross_yield": {
+                            "type": "number",
+                            "example": 0.061
+                        },
+                        "portfolio_impact": {
+                            "type": "object",
+                            "properties": {
+                                "total_portfolio_value": {
+                                    "type": "integer",
+                                    "example": 1852000
+                                },
+                                "total_mortgage_balance": {
+                                    "type": "integer",
+                                    "example": 1110000
+                                },
+                                "total_equity": {
+                                    "type": "integer",
+                                    "example": 742000
+                                },
+                                "portfolio_ltv": {
+                                    "type": "number",
+                                    "example": 0.59
+                                },
+                                "total_market_rent": {
+                                    "type": "integer",
+                                    "example": 7800
+                                },
+                                "total_achieved_rent": {
+                                    "type": "integer",
+                                    "example": 6950
+                                },
+                                "gross_yield": {
+                                    "type": "number",
+                                    "example": 0.05
+                                },
+                                "interest_coverage_ratio": {
+                                    "type": "number",
+                                    "example": 1.43
+                                },
+                                "total_properties": {
+                                    "type": "integer",
+                                    "example": 4
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
